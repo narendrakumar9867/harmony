@@ -41,6 +41,7 @@ with open(f"{model_containing_folder}/20240719_pdf_question_extraction_sklearn_c
 
 # Predict method is taken from the training repo. Use the training repo as the master copy of the predict method.
 # All training code is in https://github.com/harmonydata/pdf-questionnaire-extraction
+
 def predict(test_text):
     token_texts, token_start_char_indices, token_end_char_indices, token_properties = convert_text_to_features(
         test_text)
