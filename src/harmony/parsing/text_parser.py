@@ -51,7 +51,7 @@ def remove_numbers(question_text):
 
 
 def convert_text_to_instruments(file: RawFile) -> List[Instrument]:
-    if file.file_type == FileType.txt or file.file_type == FileType.csv:  # text files not binary
+    if file.file_type == FileType.txt or file.file_type == FileType.csv:  # A text files not binary
         page_text = file.content
     else:  # any binary format
         page_text = file.text_content
@@ -79,7 +79,7 @@ def convert_text_to_instruments(file: RawFile) -> List[Instrument]:
         df = pd.read_csv(string_io, sep=csv_sep)
         df.fillna("", inplace=True)
 
-        # Pick the column with the longest text as the question column
+        # Pick the column with the longest text as the question a column
         col_lengths = {}
         for col in df.columns:
             col_lengths[col] = df[col].apply(lambda x: len(x) if type(x) is str else 0).sum()
