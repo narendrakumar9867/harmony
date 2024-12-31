@@ -80,8 +80,8 @@ def predict(test_text):
 
 
 def convert_pdf_to_instruments(file: RawFile) -> Instrument:
-    # file is an object containing these properties:
-    # content: str - The raw file contents so if it's a PDF this is a byte sequence in base 64 encoding
+    # File is an object containing these properties:
+    # content: str - The raw file contents so if it's a PDF this is a byte sequence in a base 64 encoding
     # text_content: str - this is empty but we will use Tika to populate this in this method
     # tables: list - this is a list of all the tables in the document. The front end has populated this field.
 
