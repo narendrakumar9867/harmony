@@ -83,7 +83,7 @@ def convert_pdf_to_instruments(file: RawFile) -> Instrument:
     # File is an object containing these properties:
     # content: str - The raw file contents so if it's a PDF this is a byte sequence in a base 64 encoding
     # text_content: str - this is empty but we will use Tika to populate this in this method
-    # tables: list - this is a list of all the tables in the document. The front end has populated this field.
+    # Tables: list - this is a list of all the tables in the document. The front end has populated this field.
 
     if not file.text_content:
         file.text_content = parse_pdf_to_plain_text(file.content)  # call Tika to convert the PDF to plain text
